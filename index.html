@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ООО ПКФ «ПРОМРЕГИОНКОМПЛЕКТ» — Главная</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="brand">ООО ПКФ «ПРОМРЕГИОНКОМПЛЕКТ»</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="#products">Продукция</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="left">
+      <h1>Надёжный производитель железобетонных изделий</h1>
+      <p>Наша компания — надежный производитель и поставщик железобетонных изделий, который ценит время и доверие своих клиентов. Полный цикл услуг: производство, организация поставки и логистика по Сибирскому округу.</p>
+      <div class="cta"><a class="btn" href="#contacts">Оставить заявку</a></div>
+      <div class="advantages" style="margin-top:20px">
+        <div class="adv"><h3>Собственное производство</h3><p>Изготавливаем изделия любого типа и сложности под задачи заказчика.</p></div>
+        <div class="adv"><h3>Широкая география</h3><p>Поставки по всему Сибирскому округу и в другие города России.</p></div>
+        <div class="adv"><h3>Оперативность</h3><p>Быстро реагируем на заявки и строго соблюдаем сроки поставок.</p></div>
+        <div class="adv"><h3>Партнёрская логистика</h3><p>Сотрудничаем с проверенными транспортными компаниями.</p></div>
+      </div>
+    </div>
+    <div class="right" style="flex:1 1 300px;">
+      <img src="images/factory.svg" alt="Производство" style="width:100%;border-radius:10px;display:block">
+    </div>
+  </section>
+
+  <section id="products" class="products container">
+    <h2 class="section-title">Наша продукция</h2>
+    <div class="products-grid">
+      <div class="product"><img src="images/aerodromnye_plity.svg" alt=""><h4>Аэродромные и дорожные плиты</h4></div>
+      <div class="product"><img src="images/svai.svg" alt=""><h4>Сваи</h4></div>
+      <div class="product"><img src="images/fundamentnye_bloki.svg" alt=""><h4>Фундаментные блоки</h4></div>
+      <div class="product"><img src="images/pustotnye_plity.svg" alt=""><h4>Пустотные плиты</h4></div>
+      <div class="product"><img src="images/bordyurny_kamen.svg" alt=""><h4>Бордюрный камень</h4></div>
+      <div class="product"><img src="images/lestnichnye_marshi.svg" alt=""><h4>Лестничные марши, балконы, перемычки</h4></div>
+    </div>
+    <div style="text-align:center;margin-top:18px"><a class="btn" href="about.html">Узнать о производстве</a></div>
+  </section>
+
+  <section id="contacts" class="container">
+    <h2 class="section-title">Контакты</h2>
+    <div class="contact-section">
+      <div class="contact-card">
+        <p><strong>ООО ПКФ «ПРОМРЕГИОНКОМПЛЕКТ»</strong></p>
+        <p>Юридический и фактический адрес:<br>634021, г. Томск, ул. Кулагина, 6 «Б», офис 2</p>
+        <p>Телефоны:<br>+7-905-991-55-30<br>+7-913-860-64-00</p>
+        <p>Email: <a href="mailto:tk-gbi@mail.ru">tk-gbi@mail.ru</a></p>
+        <div style="margin-top:12px">
+          <strong>График работы:</strong>
+          <p>Пн–Пт 08:00–17:00</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="map-wrap" id="ya-map"></div>
+        <p style="font-size:13px;color:#666;margin-top:10px">Интерактивная карта — Томск, ул. Кулагина, 6 «Б»</p>
+      </div>
+    </div>
+
+    <div style="margin-top:20px" class="container">
+      <h3 style="margin-bottom:10px">Оставьте заявку</h3>
+
+      <form action="https://formspree.io/f/mdkpybpo" method="POST" style="max-width:720px">
+
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" rows="5" placeholder="Сообщение или техническое задание" required></textarea>
+        <button type="submit">Отправить заявку</button>
+      </form>
+      
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2025 ООО ПКФ «ПРОМРЕГИОНКОМПЛЕКТ». Все права защищены.</div>
+</footer>
+
+<!-- Yandex Maps API -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+  ymaps.ready(init);
+  function init(){
+    var myMap = new ymaps.Map("ya-map", {
+      center: [56.498671, 84.947876], // approximate coordinates for Tomsk, ul. Kulagina
+      zoom: 15,
+      controls: ['zoomControl','fullscreenControl']
+    });
+    var myPlacemark = new ymaps.Placemark([56.498671, 84.947876], {
+      hintContent: 'ООО ПКФ «ПРОМРЕГИОНКОМПЛЕКТ»',
+      balloonContent: 'г. Томск, ул. Кулагина, 6 «Б», офис 2'
+    });
+    myMap.geoObjects.add(myPlacemark);
+  }
+</script>
+</body>
+</html>

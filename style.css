@@ -1,0 +1,39 @@
+
+/* style.css - modern orange-accented theme */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter, Arial, sans-serif;color:#222;background:#fff;line-height:1.5}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+header{background:#fafafa;border-bottom:1px solid #eee}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 10px}
+.brand{font-weight:700;color:#222}
+nav a{margin-left:18px;text-decoration:none;color:#444;font-weight:600}
+nav a:hover{color:#ff9800}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:48px 10px}
+.hero .left{flex:1 1 420px}
+.hero h1{font-size:32px;color:#222;margin-bottom:10px}
+.hero p{color:#555;font-size:16px}
+.cta{margin-top:18px}
+.btn{background:#ff9800;color:#fff;padding:12px 18px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;font-weight:700}
+.advantages{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.adv{background:#fff;border:1px solid #f0f0f0;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+.adv h3{color:#ff9800;margin-bottom:8px}
+.products{padding:40px 10px;background:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.product{background:#fff;border:1px solid #f0f0f0;border-radius:10px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,0.03)}
+.product img{width:100%;height:220px;object-fit:cover;display:block}
+.product h4{padding:12px 14px;font-size:18px;color:#222}
+.section-title{font-size:22px;color:#222;margin-bottom:14px;text-align:center;padding-top:8px}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 10px}
+.contact-card{background:#fff;border-radius:10px;padding:18px;border:1px solid #f0f0f0}
+form input, form textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;margin-bottom:10px;font-size:15px}
+form button{background:#ff9800;color:#fff;border:none;padding:12px;border-radius:8px;cursor:pointer;font-weight:700}
+.footer{background:#222;color:#fff;text-align:center;padding:18px;margin-top:30px}
+.map-wrap{height:360px;border-radius:10px;overflow:hidden;border:1px solid #eee}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px;display:block}
+
+/* responsive */
+@media(max-width:900px){
+  .hero{padding:24px 10px}
+  .contact-section{grid-template-columns:1fr}
+}
